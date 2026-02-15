@@ -1,18 +1,19 @@
-import * as React from "react";
+import React, { ReactElement } from "react";
 import styles from "./Hero.module.scss";
 import type { IHeroProps } from "./IHeroProps";
 import { escape } from "@microsoft/sp-lodash-subset";
 
-export default class Hero extends React.Component<IHeroProps> {
-	public render(): React.ReactElement<IHeroProps> {
-		const { userDisplayName, welcomeMessageFieldLabel } = this.props;
+const Hero = (props: IHeroProps): ReactElement<IHeroProps> => {
+	const { userDisplayName, welcomeMessageFieldLabel } = props;
 
-		return (
-			<section className={`${styles.hero}`}>
-				<h2>
-					{welcomeMessageFieldLabel ?? "Welcome"}, {escape(userDisplayName)}!
-				</h2>
-			</section>
-		);
-	}
-}
+	return (
+		<section className={`${styles.hero}`}>
+			<h2>
+				{welcomeMessageFieldLabel ?? "Welcome"},{" "}
+				<span>{escape(userDisplayName)}!</span>
+			</h2>
+		</section>
+	);
+};
+
+export default Hero;
