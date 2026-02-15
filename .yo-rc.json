@@ -1,0 +1,19 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "useGulp": false,
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.22.0",
+    "sdksVersions": {},
+    "version": "1.22.2",
+    "libraryName": "employee-portal",
+    "libraryId": "a651fffc-d761-46cf-bfbc-2dd918b05330",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "employee-portal",
+    "solutionShortDescription": "employee-portal description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
