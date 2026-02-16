@@ -3,6 +3,5 @@ export interface IHeroProps {
 	isDarkTheme: boolean;
 	environmentMessage: string;
 	hasTeamsContext: boolean;
-	userDisplayName: string;
 	welcomeMessageFieldLabel: string;
 }
