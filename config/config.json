@@ -9,10 +9,19 @@
           "manifest": "./src/webparts/hero/HeroWebPart.manifest.json"
         }
       ]
+    },
+    "quick-links-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/quickLinks/QuickLinksWebPart.js",
+          "manifest": "./src/webparts/quickLinks/QuickLinksWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "HeroWebPartStrings": "lib/webparts/hero/loc/{locale}.js"
+    "HeroWebPartStrings": "lib/webparts/hero/loc/{locale}.js",
+    "QuickLinksWebPartStrings": "lib/webparts/quickLinks/loc/{locale}.js"
   }
 }

@@ -1,0 +1,35 @@
+.quickLinks {
+	// Layout
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start; // Aligns items to the top
+	justify-content: center;
+	gap: 24px; // Spacing between each icon (adjust to match design)
+
+	// Sizing and Spacing
+	width: 100%;
+	padding: 20px 10px; // Top/Bottom padding gives room for the hover shadow
+
+	// Scrolling behavior (if items overflow the screen)
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+
+	// Smooth scrolling for a premium feel
+	scroll-behavior: smooth;
+
+	// Optional: Hide the default scrollbar for a cleaner "App" look
+	// (The items will still be scrollable by swipe or mouse wheel)
+	&::-webkit-scrollbar {
+		height: 6px; // Very thin scrollbar
+	}
+
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+	}
+}

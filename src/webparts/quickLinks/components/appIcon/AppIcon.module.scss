@@ -1,0 +1,75 @@
+// AppIcon.scss
+
+// Variables for easy tweaking
+$icon-size: 5rem; // Size of the white square
+$border-radius: 1rem; // Rounded corners
+$transition-speed: 0.3s;
+$primary-text-color: #334155; // Dark slate color similar to the screenshot
+
+.app-icon-link {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: start;
+	text-decoration: none; // Removes underline from the link
+	width: 6.25rem; // Constrains text width
+	// flex-shrink: 0; // Prevents the icon from squishing if the window is small
+	cursor: pointer;
+
+	// The Interaction: When the user hovers over the WHOLE container
+	&:hover {
+		.icon-square {
+			transform: scale(1.1); // Scale up by 10%
+			box-shadow: 0 0.625rem 1.563rem rgba(0, 0, 0, 0.15); // Make shadow deeper on hover
+		}
+
+		.app-title {
+			color: #000; // Optional: Darken text on hover
+		}
+	}
+}
+
+.icon-square {
+	width: $icon-size;
+	height: $icon-size;
+	background-color: #ffffff;
+	border-radius: $border-radius;
+
+	// Flexbox to center the inner icon image
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	// The visual style from your image (soft shadow)
+	box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+	transition:
+		transform $transition-speed ease,
+		box-shadow $transition-speed ease;
+
+	margin-bottom: 0.75rem; // Space between square and text
+
+	// Styling for the image inside the square
+	img {
+		width: 50%; // Occupy 50% of the square's size
+		height: 50%;
+		object-fit: contain; // Ensures the logo doesn't stretch
+	}
+}
+
+.app-title {
+	display: block;
+	font-family:
+		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: $primary-text-color;
+	text-align: center;
+	line-height: 1.2;
+}
+
+// Optional: State for when the item is active
+.active-item {
+	.icon-square {
+		border: 0.125rem solid #007bff; // Example: Blue border if active
+	}
+}
