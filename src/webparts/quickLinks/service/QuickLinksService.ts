@@ -2,7 +2,7 @@ import PnpService from "../../../shared/services/pnp/PnPService";
 import {
 	IAppIconProps,
 	IQuickLinksItem,
-} from "../components/quickLinks/ILinkProps";
+} from "../components/appIcon/ILinkProps";
 import "@pnp/sp/lists";
 
 export class QuickLinksService {
